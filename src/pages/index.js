@@ -23,7 +23,6 @@ export const query = graphql`
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      {console.log(data, "data")}
       <SEO title="Home" />
       <h1>Planets</h1>
       {data.allStarwarsPlanets.edges[0].node.results.map(items => (

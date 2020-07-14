@@ -23,7 +23,9 @@ const SecondPage = ({ data }) => (
     <SEO title="Page two" />
     <h1>People</h1>
     {data.allStarwarsPeople.edges[0].node.results.map(items => (
-      <p>{items.name}</p>
+      <Link to={`/personDetail/${items.name}`}>
+        <p>{items.name}</p>
+      </Link>
     ))}
     <Link to="/">Go back to the homepage</Link>
   </Layout>
